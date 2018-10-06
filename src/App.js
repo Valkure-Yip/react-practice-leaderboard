@@ -68,7 +68,7 @@ class User extends Component {
             </tr>
         );
     }
-    handleClickUpdateUser() {//这个函数干什么用的？
+    handleClickUpdateUser() {
         $.get( this.props.apiroot+"update/"+this.props.user.username,
             function( data ) {
                 setTimeout(this.props.updatePage,3000);
@@ -81,7 +81,7 @@ class User extends Component {
     }
 }
 
-class Leaderboard extends React.Component { //props.users.map(function)是什么
+class Leaderboard extends React.Component { //props.users.map(function)?
     render() {
         var count = 0;
         var userlist = this.props.users.map(function(user){
